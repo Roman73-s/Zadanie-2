@@ -164,15 +164,22 @@
 
         <label class="form-label">
           ФИО:<br>
-          <input type="text" name="fio" class="form-input" required>
-        </label>
-        <br>
+      <input type="text" name="fio" class="form-input" 
+        pattern="^[A-Za-zА-Яа-яЁё\s\-]+$"
+        title = "Только буквы, пробелы и дефисы"
+        required>
+    </label>
+    <br>
 
         <label class="form-label">
           Телефон:<br>
-          <input type="tel" name="phone" class="form-input" autocomplete="off" required>
-        </label>
-        <br>
+      <input type="tel" name="phone" 
+        pattern="^[\d+\(\)\s\-]{10,}$"
+        title = "Только цифры, +, -, (, ), пробел"
+        autocomplete="off"
+        required>
+    </label>
+    <br>
 
         <label class="form-label">
           E-mail:<br>
@@ -180,11 +187,12 @@
         </label>
         <br>
 
-        <label class="form-label">
-          Дата рождения:<br>
-          <input type="date" name="birth" class="form-input" required>
-        </label>
-        <br>
+       <label>
+      Дата рождения:<br>
+      <input type="date" name="birth" class = "form-input"
+        max = "2026-12-31" required>
+    </label>
+    <br>
 
         Пол:<br>
         <label><input type="radio" name="sex" value="m" required> Мужской</label>
